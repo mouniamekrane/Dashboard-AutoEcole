@@ -98,14 +98,24 @@ export default function FormModal({ open, handleClose }){
           fullWidth
         />
       </DialogContent>
-      <DialogActions xs={{ margin: '0 auto' }}>
-        <Box display="flex" flex-direction="row" gap={7}>
-          <Button size="large" width="50px" variant="contained" onClick={handleClose}>
-            Cancel
-          </Button>
-          <Button onClick={handleSubmit} color="primary" size="large" variant="contained">
-            Submit
-          </Button>
+      <DialogActions>
+        <Box
+          display="flex"
+          justifyContent="center"
+          flexDirection="row"
+          alignItems="center"
+          margin="0 auto"
+        >
+          <Box>
+            <Button size="large" variant="contained" onClick={handleClose}>
+              Cancel
+            </Button>
+          </Box>
+          <Box ml={2}>
+            <Button onClick={handleSubmit} color="primary" size="large" variant="contained">
+              Submit
+            </Button>
+          </Box>
         </Box>
       </DialogActions>
     </Dialog>
